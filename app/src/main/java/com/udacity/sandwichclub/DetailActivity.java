@@ -67,6 +67,6 @@ public class DetailActivity extends AppCompatActivity {
         originTextView.setText(sandwich.getPlaceOfOrigin());
         descriptionTextView.setText(sandwich.getDescription());
         alsoKnownAsTextView.setText(String.join("\n", sandwich.getAlsoKnownAs()));
-        ingredientsTextView.setText(String.join(", ", sandwich.getIngredients()));
+        ingredientsTextView.setText(String.join("\n", sandwich.getIngredients()));
     }
 }
