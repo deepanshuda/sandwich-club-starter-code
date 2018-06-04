@@ -7,15 +7,12 @@
     tools:context="com.udacity.sandwichclub.DetailActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:paddingLeft="10dp"
-    android:paddingStart="10dp"
-    android:paddingRight="10dp"
-    android:paddingEnd="10dp">
+    android:fillViewport="true">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/detail_layout_padding">
 
         <ImageView
             android:id="@+id/image_iv"
@@ -29,8 +26,9 @@
             android:id="@+id/origin_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/origin_label"
-            app:layout_constraintTop_toTopOf="@+id/origin_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/origin_label"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
@@ -40,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/detail_also_known_as_label"
+            android:layout_marginTop="@dimen/label_top_margin"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/origin_tv"/>
 
@@ -48,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/detail_ingredients_label"
+            android:layout_marginTop="@dimen/label_top_margin"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/also_known_tv"/>
 
@@ -56,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/detail_place_of_origin_label"
+            android:layout_marginTop="@dimen/label_top_margin"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/description_tv"/>
 
@@ -63,30 +64,38 @@
             android:id="@+id/description_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/description_label"
-            app:layout_constraintTop_toTopOf="@+id/description_label"
+            app:layout_constraintTop_toBottomOf="@+id/description_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/ingredients_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/ingredients_label"
-            app:layout_constraintTop_toTopOf="@+id/ingredients_label"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/also_known_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="@+id/also_known_label"
-            app:layout_constraintTop_toTopOf="@+id/also_known_label"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/also_known_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/description_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/detail_description_label"
+            android:layout_marginTop="@dimen/label_top_margin"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/image_iv"/>
 
